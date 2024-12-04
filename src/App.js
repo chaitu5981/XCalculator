@@ -5,7 +5,6 @@ const App = () => {
   const [answer, setAnswer] = useState("");
   const sanitize = (newInput) => {
     const n = newInput.length;
-    if (newInput[0] === "0") newInput = newInput.slice(1);
     if (newInput.length === 0) return "";
     if ("*/-+".includes(newInput[n - 2]) && "*/+-".includes(newInput[n - 1])) {
       newInput = newInput.slice(0, n - 2) + newInput[n - 1];
